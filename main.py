@@ -24,4 +24,4 @@ def banner(text: str):
     return figlet_banner.renderText(text), 200, content_type
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0', debug=True)

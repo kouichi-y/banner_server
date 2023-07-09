@@ -31,3 +31,31 @@ curl http://127.0.0.1:5000/banner/コンニチワ
          #   ##      ##########      #         ##     
 #########  ##                      ##        ##       
 ```
+
+# Dockerイメージを作って動かしてみる
+
+Dockerイメージを作るには:
+
+```bash
+cd BannerServer/
+docker build -t banner-server:0.1 .
+```
+
+Dockerイメージを起動するには:
+
+```bash
+docker run -it -p 15000:5000 --name banner banner-server:0.1
+```
+
+デーモンで起動するには:
+
+```bash
+docker run -d --restart always -p 15000:5000 --name banner banner-server:0.1
+```
+
+ホスト側のポート番号を15000に変更しているので、URLは以下のようになる。
+
+
+```bash
+curl http://127.0.0.1:15000/HelloWorld!
+```
