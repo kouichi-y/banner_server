@@ -1,4 +1,4 @@
-# BannerServer
+# banner_server
 
 これは文字列を大きな文字で返してくれるWebアプリケーションです。
 
@@ -37,7 +37,7 @@ curl http://127.0.0.1:5000/banner/コンニチワ
 Dockerイメージを作るには:
 
 ```bash
-cd BannerServer/
+cd banner_server/
 docker build -t banner-server:0.1 .
 ```
 
