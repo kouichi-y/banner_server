@@ -59,3 +59,17 @@ docker run -d --restart always -p 15000:5000 --name banner banner-server:0.1
 ```bash
 curl http://127.0.0.1:15000/HelloWorld!
 ```
+
+# Docker Composeで動かす
+
+デーモンで起動するには:
+
+```bash
+docker compose up -d
+```
+
+停止するには:
+
+```bash
+docker compose down
+```
