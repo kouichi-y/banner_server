@@ -1,11 +1,6 @@
+'''banner_server main program'''
 from flask import Flask
 from pyfiglet import Figlet
-
-'''banner_server main program
-
-usage:
-    python3 main.py
-'''
 
 # 参考: https://qiita.com/tommy_aka_jps/items/4cd675e3bea4c2632d4d
 figlet_standard = Figlet(font='standard')
