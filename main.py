@@ -9,19 +9,19 @@ figlet_slant = Figlet(font='slant')
 figlet_fuzzy = Figlet(font='fuzzy')
 
 app = Flask(__name__)
-content_type = {'Content-Type': 'text/plain; charset=utf-8'}
+header = {'Content-Type': 'text/plain; charset=utf-8'}
 
 @app.route('/')
 def hello():
-    return figlet_slant.renderText('Hello World!'), 200, content_type
+    return figlet_slant.renderText('Hello World!'), 200, header
 
 @app.route('/<text>')
 def standard(text: str):
-    return figlet_standard.renderText(text), 200, content_type
+    return figlet_standard.renderText(text), 200, header
 
 @app.route('/banner/<text>')
 def banner(text: str):
-    return figlet_banner.renderText(text), 200, content_type
+    return figlet_banner.renderText(text), 200, header
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', debug=True)
